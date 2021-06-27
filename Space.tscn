@@ -1,0 +1,230 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://space.jpg" type="Texture" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Black.png" type="Texture" id=3]
+[ext_resource path="res://BlackHole.shader" type="Shader" id=4]
+
+[sub_resource type="Curve" id=2]
+min_value = -1.0
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.144737, -0.418182 ), 0.321353, 0.267449, 0, 0, Vector2( 0.25, 0.165909 ), 0.0, 0.0, 0, 0, Vector2( 0.322368, -0.2 ), 0.0, -1.49236, 0, 0, Vector2( 0.423913, -0.0181818 ), 0.286753, 0.286753, 0, 0, Vector2( 0.519737, 0.00227273 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=3]
+curve = SubResource( 2 )
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = ExtResource( 4 )
+shader_param/strength = 0.2
+shader_param/curve = SubResource( 3 )
+
+[sub_resource type="Animation" id=5]
+resource_name = "Warp"
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/keys = {
+"points": PoolRealArray(  ),
+"times": PoolRealArray(  )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/keys = {
+"points": PoolRealArray(  ),
+"times": PoolRealArray(  )
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 360.0 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "Move"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 299.831, 491.246 ), Vector2( 983.831, 333.246 ) ]
+}
+
+[sub_resource type="Curve" id=7]
+min_value = -1.0
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.0978261, 0.454545 ), 0.321353, 0.267449, 0, 0, Vector2( 0.224638, -0.6 ), 0.0, 0.0, 0, 0, Vector2( 0.355072, 0.436364 ), 0.0, -1.49236, 0, 0, Vector2( 0.416667, 0.2 ), -2.50909, -2.50909, 0, 0, Vector2( 0.519737, 0.00227273 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=8]
+curve = SubResource( 7 )
+
+[sub_resource type="ShaderMaterial" id=9]
+shader = ExtResource( 4 )
+shader_param/strength = 0.2
+shader_param/curve = SubResource( 8 )
+
+[sub_resource type="Animation" id=10]
+resource_name = "Move"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1280.32, 847.303 ), Vector2( 1270.32, 351.303 ) ]
+}
+
+[sub_resource type="Curve" id=11]
+min_value = -1.0
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.0978261, 0.454545 ), 0.321353, 0.267449, 0, 0, Vector2( 0.224638, -0.6 ), 3.42149, 3.42149, 0, 0, Vector2( 0.387681, -0.109091 ), 1.25455, 1.25455, 0, 0, Vector2( 0.519737, 0.00227273 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=12]
+curve = SubResource( 11 )
+
+[sub_resource type="ShaderMaterial" id=13]
+shader = ExtResource( 4 )
+shader_param/strength = 0.3
+shader_param/curve = SubResource( 12 )
+
+[sub_resource type="Animation" id=14]
+resource_name = "Move"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.237819, 0.5, 0.748624 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 750.238, 261.244 ), Vector2( 1221.68, 283.228 ), Vector2( 1690.24, 495.244 ), Vector2( 1221.68, 283.228 ) ]
+}
+
+[sub_resource type="Curve" id=15]
+min_value = -1.0
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.206522, 0.527273 ), 0.321353, 0.267449, 0, 0, Vector2( 0.307971, 0.418182 ), -2.68831, -2.68831, 0, 0, Vector2( 0.394928, 0.145455 ), -2.09091, -2.09091, 0, 0, Vector2( 0.519737, 0.00227273 ), -0.363824, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=16]
+curve = SubResource( 15 )
+
+[sub_resource type="ShaderMaterial" id=17]
+shader = ExtResource( 4 )
+shader_param/strength = -0.0636153
+shader_param/curve = SubResource( 16 )
+
+[sub_resource type="Animation" id=18]
+resource_name = "Shockwave"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.6, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.3, -0.2, 0.0 ]
+}
+
+[node name="space" type="Sprite"]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="BlackHole1" type="Sprite" parent="."]
+material = SubResource( 4 )
+position = Vector2( 814.235, 372.422 )
+rotation = 5.03372
+scale = Vector2( 6.29497, 7.86134 )
+texture = ExtResource( 2 )
+
+[node name="Black" type="Sprite" parent="BlackHole1"]
+scale = Vector2( 0.040857, 0.0418804 )
+texture = ExtResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BlackHole1"]
+autoplay = "Warp"
+anims/Warp = SubResource( 5 )
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="BlackHole1"]
+autoplay = "Move"
+playback_speed = 0.1
+anims/Move = SubResource( 6 )
+
+[node name="BackBufferCopy" type="BackBufferCopy" parent="."]
+copy_mode = 2
+
+[node name="BlackHole2" type="Sprite" parent="."]
+material = SubResource( 9 )
+position = Vector2( 1270.54, 362.012 )
+scale = Vector2( 6.40252, 6.47263 )
+texture = ExtResource( 2 )
+
+[node name="Black" type="Sprite" parent="BlackHole2"]
+position = Vector2( -0.201703, -0.0699228 )
+scale = Vector2( 0.040857, 0.0418804 )
+texture = ExtResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BlackHole2"]
+autoplay = "Move"
+playback_speed = 0.1
+anims/Move = SubResource( 10 )
+
+[node name="BackBufferCopy2" type="BackBufferCopy" parent="."]
+copy_mode = 2
+
+[node name="BlackHole3" type="Sprite" parent="."]
+material = SubResource( 13 )
+position = Vector2( 856.283, 260.256 )
+scale = Vector2( 6.55702, 6.39259 )
+texture = ExtResource( 2 )
+
+[node name="Black" type="Sprite" parent="BlackHole3"]
+position = Vector2( -0.201703, -0.0699228 )
+scale = Vector2( 0.040857, 0.0418804 )
+texture = ExtResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BlackHole3"]
+autoplay = "Move"
+playback_speed = 0.15
+anims/Move = SubResource( 14 )
+
+[node name="BackBufferCopy3" type="BackBufferCopy" parent="."]
+copy_mode = 2
+
+[node name="Shockwave" type="Sprite" parent="."]
+material = SubResource( 17 )
+position = Vector2( 823.283, 724.94 )
+scale = Vector2( 8.21327, 7.86134 )
+texture = ExtResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Shockwave"]
+autoplay = "Shockwave"
+anims/Shockwave = SubResource( 18 )
